@@ -6,14 +6,18 @@
     </head>
     <body>
         <p>
-            Hello from
-            <strong data-bind="text: language">todo</strong>
-            and
-            <strong data-bind="text: framework">todo</strong>!
+          First name:
+            <strong data-bind="text: firstName">todo</strong>
+          Last name:
+            <strong data-bind="text: lastName">todo</strong>
+            Full name:
+            <strong data-bind="text: fullName"></strong>
         </p>
 
-        <p>Language: <input data-bind="value: language" /></p>
-        <p>Framework: <input data-bind="value: framework" /></p>
+        <p>Last name: <input data-bind="value: firstName" /></p>
+        <p>First name: <input data-bind="value: lastName" /></p>
+
+        <button data-bind="click: capitalizeLastName">Go caps</button>
 
         <script src="./bundle.js"></script>
     

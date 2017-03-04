@@ -238,13 +238,13 @@ new a.O;var b=new a.vb;0<b.ad&&a.Db(b);a.b("jqueryTmplTemplateEngine",a.vb)})()}
 
 __webpack_require__(0);
 var HelloViewModel = (function () {
-    function HelloViewModel(language, framework) {
-        this.language = ko.observable(language);
-        this.framework = ko.observable(framework);
+    function HelloViewModel(lastName, firstName) {
+        this.lastName = ko.observable(lastName);
+        this.firstName = ko.observable(firstName);
     }
     return HelloViewModel;
 }());
-ko.applyBindings(new HelloViewModel("TypeScript", "Knockout"));
+ko.applyBindings(new HelloViewModel("Morten", "Ottersen"));
 
 
 /***/ })
