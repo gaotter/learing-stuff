@@ -239,9 +239,20 @@ new a.O;var b=new a.vb;0<b.ad&&a.Db(b);a.b("jqueryTmplTemplateEngine",a.vb)})()}
 __webpack_require__(0);
 var HelloViewModel = (function () {
     function HelloViewModel(lastName, firstName) {
+        var _this = this;
         this.lastName = ko.observable(lastName);
         this.firstName = ko.observable(firstName);
+        this.fullName = ko.computed({
+            owner: this,
+            read: function () {
+                return _this.firstName() + " " + _this.lastName();
+            }
+        });
     }
+    HelloViewModel.prototype.capitalizeLastName = function () {
+        var lastNameUpper = this.lastName().toUpperCase();
+        this.lastName(lastNameUpper);
+    };
     return HelloViewModel;
 }());
 ko.applyBindings(new HelloViewModel("Morten", "Ottersen"));
